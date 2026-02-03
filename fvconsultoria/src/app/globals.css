@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  /* Camadas de Preto/Cinza para dar profundidade */
+  --background: #050505;       /* Fundo quase preto */
+  --bg-surface: #0f0f0f;      /* Superfície um pouco mais clara para cards */
+  --bg-darker: #000000;       /* Preto absoluto para contrastes */
+  
+  --foreground: #ededed;
+  
+  /* Cores da marca */
+  --brand-green: #10B981;
+  --brand-orange: #F97316;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--bg-surface);
+  --color-darker: var(--bg-darker);
+  --color-brand-green: var(--brand-green);
+  --color-brand-orange: var(--brand-orange);
+  --color-navbar-bg: rgba(5, 5, 5, 0.85);
+}
+
+body {
+  /* Gradiente radial sutil para o fundo não ser flat */
+  background: radial-gradient(circle at 50% -20%, #1a1a1a 0%, var(--background) 70%);
+  color: var(--foreground);
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
